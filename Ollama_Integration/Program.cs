@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
+using Microsoft.SemanticKernel.Connectors.OpenAI;
+using Microsoft.SemanticKernel.Memory;
 
 namespace Ollama_Integration
 {
@@ -15,6 +17,7 @@ namespace Ollama_Integration
                 modelId: "llama3.2",
                 endpoint: new Uri("http://localhost:11434")
             );
+
 
             // Build the kernel
             var kernel = builder.Build();
